@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneha Gandhi - Product Manager Portfolio</title>
+  <meta name="description" content="Product Manager portfolio showcasing projects, skills, and experience in product ownership and execution" />
+  <meta name="author" content="Sneha Gandhi" />
+
+  <meta property="og:title" content="Sneha Gandhi - Product Manager Portfolio" />
+  <meta property="og:description" content="Product Manager portfolio showcasing projects, skills, and experience in product ownership and execution" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@sneha_gandhi" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+            primary: {
+              DEFAULT: "hsl(var(--primary))",
+              foreground: "hsl(var(--primary-foreground))",
+            },
+            secondary: {
+              DEFAULT: "hsl(var(--secondary))",
+              foreground: "hsl(var(--secondary-foreground))",
+            },
+            destructive: {
+              DEFAULT: "hsl(var(--destructive))",
+              foreground: "hsl(var(--destructive-foreground))",
+            },
+            muted: {
+              DEFAULT: "hsl(var(--muted))",
+              foreground: "hsl(var(--muted-foreground))",
+            },
+            accent: {
+              DEFAULT: "hsl(var(--accent))",
+              foreground: "hsl(var(--accent-foreground))",
+            },
+            popover: {
+              DEFAULT: "hsl(var(--popover))",
+              foreground: "hsl(var(--popover-foreground))",
+            },
+            card: {
+              DEFAULT: "hsl(var(--card))",
+              foreground: "hsl(var(--card-foreground))",
+            },
+          },
+          borderRadius: {
+            lg: "var(--radius)",
+            md: "calc(var(--radius) - 2px)",
+            sm: "calc(var(--radius) - 4px)",
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Product Manager Portfolio Design System */
+    :root {
+      /* Background system */
+      --background: 248 250% 99%;
+      --foreground: 215 25% 12%;
+
+      /* Dashboard-specific colors */
+      --primary: 217 91% 52%;
+      --primary-foreground: 0 0% 98%;
+      --primary-glow: 217 91% 65%;
+
+      --secondary: 210 20% 96%;
+      --secondary-foreground: 215 25% 25%;
+
+      --success: 142 76% 36%;
+      --success-foreground: 0 0% 98%;
+      --success-light: 142 76% 90%;
+
+      --warning: 43 96% 56%;
+      --warning-foreground: 0 0% 98%;
+      --warning-light: 43 96% 90%;
+
+      --danger: 0 84% 60%;
+      --danger-foreground: 0 0% 98%;
+      --danger-light: 0 84% 95%;
+
+      /* Card system */
+      --card: 0 0% 100%;
+      --card-foreground: 215 25% 12%;
+      --card-border: 214 32% 91%;
+
+      /* Navigation */
+      --nav-background: 0 0% 100%;
+      --nav-foreground: 215 25% 25%;
+      --nav-accent: 217 91% 52%;
+      --nav-hover: 210 20% 96%;
+
+      /* Muted elements */
+      --muted: 210 20% 96%;
+      --muted-foreground: 215 16% 47%;
+
+      /* Accent colors */
+      --accent: 217 91% 52%;
+      --accent-foreground: 0 0% 98%;
+
+      /* Status colors */
+      --status-todo: 43 96% 56%;
+      --status-progress: 217 91% 52%;
+      --status-done: 142 76% 36%;
+
+      /* Interactive elements */
+      --border: 214 32% 91%;
+      --input: 214 32% 91%;
+      --ring: 217 91% 52%;
+
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, hsl(217 91% 52%), hsl(217 91% 65%));
+      --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 50%));
+      --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
+
+      /* Shadows */
+      --shadow-card: 0 4px 6px -1px hsl(215 25% 12% / 0.1), 0 2px 4px -1px hsl(215 25% 12% / 0.06);
+      --shadow-hover: 0 10px 15px -3px hsl(215 25% 12% / 0.1), 0 4px 6px -1px hsl(215 25% 12% / 0.05);
+      --shadow-primary: 0 4px 14px 0 hsl(217 91% 52% / 0.25);
+
+      /* Animations */
+      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-fast: all 0.15s ease;
+
+      --radius: 0.75rem;
+    }
+
+    * {
+      border-color: hsl(var(--border));
+    }
+
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+    }
+
+    .animate-in {
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .shadow-primary {
+      box-shadow: var(--shadow-primary);
+    }
+
+    .bg-gradient-card {
+      background: var(--gradient-card);
+    }
+
+    .shadow-card {
+      box-shadow: var(--shadow-card);
+    }
+
+    .shadow-hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .transition-all {
+      transition: var(--transition-smooth);
+    }
+
+    .bg-primary\/5 {
+      background-color: hsl(var(--primary) / 0.05);
+    }
+
+    .border-primary\/20 {
+      border-color: hsl(var(--primary) / 0.2);
+    }
+
+    .bg-success\/5 {
+      background-color: hsl(var(--success) / 0.05);
+    }
+
+    .border-success\/20 {
+      border-color: hsl(var(--success) / 0.2);
+    }
+
+    .bg-danger\/5 {
+      background-color: hsl(var(--danger) / 0.05);
+    }
+
+    .border-danger\/20 {
+      border-color: hsl(var(--danger) / 0.2);
+    }
+
+    .bg-warning\/5 {
+      background-color: hsl(var(--warning) / 0.05);
+    }
+
+    .border-warning\/20 {
+      border-color: hsl(var(--warning) / 0.2);
+    }
+
+    .text-primary {
+      color: hsl(var(--primary));
+    }
+
+    .text-success {
+      color: hsl(var(--success));
+    }
+
+    .text-danger {
+      color: hsl(var(--danger));
+    }
+
+    .text-warning {
+      color: hsl(var(--warning));
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-background">
+  <!-- Portfolio Header -->
+  <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div class="container flex h-16 max-w-screen-xl items-center px-6">
+      <div class="mr-4 hidden md:flex">
+        <a class="mr-6 flex items-center space-x-2" href="#">
+          <span class="hidden font-bold sm:inline-block">Sneha Gandhi</span>
+        </a>
+        <nav class="flex items-center space-x-6 text-sm font-medium">
+          <a href="#about" class="transition-colors hover:text-primary">About</a>
+          <a href="#skills" class="transition-colors hover:text-primary">Skills</a>
+          <a href="#projects" class="transition-colors hover:text-primary">Projects</a>
+          <a href="#contact" class="transition-colors hover:text-primary">Contact</a>
+        </nav>
+      </div>
+      <div class="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+        <div class="w-full flex-1 md:w-auto md:flex-none">
+          <!-- Mobile menu button would go here if needed -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-[90vh] flex items-center justify-center px-6 py-20 bg-gradient-to-br from-background via-background to-secondary/30">
+    <div class="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in duration-700">
+      <div class="space-y-4">
+        <h1 class="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
+          Hi, I'm <span class="text-primary">Sneha Gandhi</span>
+        </h1>
+        <p class="text-2xl md:text-3xl text-muted-foreground font-medium">
+          Product Manager
+        </p>
+      </div>
+
+      <p class="text-lg md:text-xl text-foreground max-w-2xl mx-auto leading-relaxed text-justify">
+        Driven by curiosity and empathy, I turn complexity into clarity through data, design, and teamwork. Over the past 6+ years, I've led cross-functional teams, optimized onboarding journeys, and delivered products that balance business outcomes with user delight. I believe meaningful impact starts with understanding people and executing with purpose.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+        <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 shadow-primary" onclick="scrollToSection('projects')">
+          View My Work
+          <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+        <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8" onclick="scrollToSection('contact')">
+          Get In Touch
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-card">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          About Me
+        </h2>
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+          Building products that matter, backed by data and driven by user needs
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 mb-16">
+        <div class="space-y-6">
+          <h3 class="text-2xl font-semibold text-foreground">
+            My Product Philosophy
+          </h3>
+          <p class="text-foreground leading-relaxed">
+            I believe great products begin with empathy and evolve through understanding. Every decision should serve a real human need and create measurable impact. I build with curiosity, validate with data, and iterate with heart because meaningful products aren't just used, they're felt.
+          </p>
+          <p class="text-foreground leading-relaxed">
+            Throughout my career, I've focused on simplifying complex experiences, driving customer growth, and improving onboarding flows that truly convert. I love working in spaces where data meets intuition—where you can test, learn, and adapt quickly. Whether I'm collaborating with design on user flows or aligning roadmaps with engineering, I thrive in the messy middle where clarity is created and impact is measured.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <h3 class="text-2xl font-semibold text-foreground">
+            Career Highlights
+          </h3>
+          <ul class="space-y-4 text-foreground">
+            <li class="flex items-start">
+              <span class="text-primary mr-2 mt-1">▸</span>
+              <span>Increased upsell conversions by 20% through iterative experimentation and user-driven redesigns</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2 mt-1">▸</span>
+              <span>Increased user retention by 40% through data-driven feature optimization</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2 mt-1">▸</span>
+              <span>Collaborated with design, engineering, and analytics across a 15+ person cross-functional team to deliver and iterate at speed</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2 mt-1">▸</span>
+              <span>Brought structure to prioritization using RICE and MoSCoW, ensuring focus on the highest-value initiatives</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gradient-card rounded-xl p-6 border border-card-border shadow-card hover:shadow-hover transition-all duration-300">
+          <svg class="h-10 w-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m8 0V8a2 2 0 01-2 2H8a2 2 0 01-2-2V6m8 0H8"></path>
+          </svg>
+          <h4 class="text-lg font-semibold text-foreground mb-2">
+            6+ Years of Product Ownership and Execution
+          </h4>
+          <p class="text-sm text-muted-foreground">
+            From discovery to delivery, transforming ideas into products that perform
+          </p>
+        </div>
+
+        <div class="bg-gradient-card rounded-xl p-6 border border-card-border shadow-card hover:shadow-hover transition-all duration-300">
+          <svg class="h-10 w-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+          <h4 class="text-lg font-semibold text-foreground mb-2">
+            Turning Insights into Outcomes
+          </h4>
+          <p class="text-sm text-muted-foreground">
+            Using data-driven insights to refine journeys and deliver measurable impact
+          </p>
+        </div>
+
+        <div class="bg-gradient-card rounded-xl p-6 border border-card-border shadow-card hover:shadow-hover transition-all duration-300">
+          <svg class="h-10 w-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+          </svg>
+          <h4 class="text-lg font-semibold text-foreground mb-2">
+            Cross-Functional Leadership
+          </h4>
+          <p class="text-sm text-muted-foreground">
+            Partnering across design, tech, and business teams to deliver meaningful outcomes at scale
+          </p>
+        </div>
+
+        <div class="bg-gradient-card rounded-xl p-6 border border-card-border shadow-card hover:shadow-hover transition-all duration-300">
+          <svg class="h-10 w-10 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h4 class="text-lg font-semibold text-foreground mb-2">
+            User-Centric Approach
+          </h4>
+          <p class="text-sm text-muted-foreground">
+            Transforming complex user journeys into simple, intuitive, and meaningful experiences that drive growth
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-6 bg-background">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          Skills & Tools
+        </h2>
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+          A comprehensive toolkit for delivering exceptional product outcomes
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Core Product Skills -->
+        <div class="bg-card rounded-2xl p-8 border border-card-border shadow-card">
+          <h3 class="text-2xl font-semibold text-foreground mb-6">
+            Core Product Skills
+          </h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                Product Strategy & Outcome-Driven Roadmapping
+              </span>
+            </div>
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                User Research, Data Analysis & Experimentation
+              </span>
+            </div>
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                Requirements Documentation & Prioritization Frameworks
+              </span>
+            </div>
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                Stakeholder Alignment & Strategic Communication
+              </span>
+            </div>
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zm-6.5 5.5l.5.5 1.5-1.5L12 9l-1.5 1.5-.5-.5L9.5 9.5z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                Agile & Cross-Functional Delivery
+              </span>
+            </div>
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                Go-to-Market Planning & Post-Launch Optimization
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="bg-card rounded-2xl p-8 border border-card-border shadow-card">
+          <h3 class="text-2xl font-semibold text-foreground mb-6">
+            Technical Skills
+          </h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                Looker & Adobe Analytics
+              </span>
+            </div>
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                Figma for design collaboration
+              </span>
+            </div>
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                A/B Testing & Experimentation
+              </span>
+            </div>
+            <div class="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zm-6.5 5.5l.5.5 1.5-1.5L12 9l-1.5 1.5-.5-.5L9.5 9.5z"></path>
+              </svg>
+              <span class="text-foreground font-medium text-sm">
+                Agile delivery using Azure DevOps
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="bg-card rounded-2xl p-8 border border-card-border shadow-card">
+          <h3 class="text-2xl font-semibold text-foreground mb-6">
+            Tools & Platforms
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Azure DevOps</span>
+            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Figma</span>
+            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Miro</span>
+            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Adobe Analytics</span>
+            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Teams</span>
+            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Looker</span>
+            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">UserTesting</span>
+            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Medallia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 bg-card">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          Featured Projects
+        </h2>
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+          Real-world product challenges solved with strategic thinking and execution excellence
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Project 1 -->
+        <div class="bg-gradient-card rounded-2xl p-8 md:p-10 border border-card-border shadow-card hover:shadow-hover transition-all duration-300">
+          <div class="mb-6">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  Launching the Dynamic Product Selector
+                </h3>
+                <p class="text-muted-foreground">
+                  H&R Block • DIY Onboarding
+                </p>
+              </div>
+            </div>
+            <p class="text-lg text-foreground leading-relaxed">
+              Led the introduction of a dynamic product selector to improve early-funnel decision-making and reduce drop-offs during SKU selection for DIY customers.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-danger/5 rounded-lg p-6 border border-danger/20">
+              <h4 class="text-lg font-semibold text-foreground mb-3 flex items-center">
+                <svg class="h-5 w-5 mr-2 text-danger" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Challenge
+              </h4>
+              <p class="text-foreground leading-relaxed">
+                64% of users were dropping off during the product selector and SKU offer screens, significantly stalling funnel progression and limiting monetization opportunities at the top of the journey.
+              </p>
+            </div>
+
+            <div class="bg-success/5 rounded-lg p-6 border border-success/20">
+              <h4 class="text-lg font-semibold text-foreground mb-3 flex items-center">
+                <svg class="h-5 w-5 mr-2 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+                Solution Approach
+              </h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Evaluated a Dynamic Product Selector (DPS) against the existing 9-tile experience using retention and funnel behavior data</span>
+                </li>
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Designed the selector to more accurately guide users to relevant SKUs early in the flow</span>
+                </li>
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Measured impact using retention-to-start, offer visibility, and paid attachment metrics</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-foreground mb-4">
+              Business Impact
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="bg-primary/5 rounded-lg p-4 border border-primary/20 text-center">
+                <svg class="h-6 w-6 text-primary mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-primary mb-1 break-words">
+                  +100%
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  TPR attachment rate
+                </div>
+              </div>
+              <div class="bg-primary/5 rounded-lg p-4 border border-primary/20 text-center">
+                <svg class="h-6 w-6 text-primary mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-primary mb-1 break-words">
+                  Higher
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Paid purchases including Plus
+                </div>
+              </div>
+              <div class="bg-primary/5 rounded-lg p-4 border border-primary/20 text-center">
+                <svg class="h-6 w-6 text-primary mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-primary mb-1 break-words">
+                  Improved
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Early-funnel monetization
+                </div>
+              </div>
+              <div class="bg-primary/5 rounded-lg p-4 border border-primary/20 text-center">
+                <svg class="h-6 w-6 text-primary mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-primary mb-1 break-words">
+                  Improved
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  User flow without loss in retention to start
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">User Journey Optimization</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Experimentation and Validation</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Behavioral Analytics</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Customer Centered Design</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-gradient-card rounded-2xl p-8 md:p-10 border border-card-border shadow-card hover:shadow-hover transition-all duration-300">
+          <div class="mb-6">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  Optimizing Upsell Recommendations
+                </h3>
+                <p class="text-muted-foreground">
+                  H&R Block • DIY
+                </p>
+              </div>
+            </div>
+            <p class="text-lg text-foreground leading-relaxed">
+              Designed and tested recommendation-driven upsell strategies within the product selector to improve attach rates and revenue, with a focus on post-selection nudges for Free users and prior clients.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-danger/5 rounded-lg p-6 border border-danger/20">
+              <h4 class="text-lg font-semibold text-foreground mb-3 flex items-center">
+                <svg class="h-5 w-5 mr-2 text-danger" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Challenge
+              </h4>
+              <p class="text-foreground leading-relaxed">
+                A significant 19% of users exited the product selector after landing on the Free SKU, resulting in missed upsell opportunities and suboptimal monetization.
+              </p>
+            </div>
+
+            <div class="bg-success/5 rounded-lg p-6 border border-success/20">
+              <h4 class="text-lg font-semibold text-foreground mb-3 flex items-center">
+                <svg class="h-5 w-5 mr-2 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+                Solution Approach
+              </h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Designed and tested a recommendation logic layer ('recommendation hat') to surface higher-value SKUs (TPR and Plus) after initial product selection</span>
+                </li>
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Ran controlled A/B experiments to compare upsell combinations: TPR + Plus vs Free + Plus for prior clients</span>
+                </li>
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Evaluated performance across pricing phases (Early vs Late) to understand revenue sensitivity and long-tail effects</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-foreground mb-4">
+              Business Impact
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="bg-success/5 rounded-lg p-4 border border-success/20 text-center">
+                <svg class="h-6 w-6 text-success mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-success mb-1 break-words">
+                  +7%
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Overall revenue lift
+                </div>
+              </div>
+              <div class="bg-success/5 rounded-lg p-4 border border-success/20 text-center">
+                <svg class="h-6 w-6 text-success mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-success mb-1 break-words">
+                  +0.7 ppt
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  TPR attach rate increase
+                </div>
+              </div>
+              <div class="bg-success/5 rounded-lg p-4 border border-success/20 text-center">
+                <svg class="h-6 w-6 text-success mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-success mb-1 break-words">
+                  Maintained Revenue
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Free + Plus upsell for prior clients
+                </div>
+              </div>
+              <div class="bg-success/5 rounded-lg p-4 border border-success/20 text-center">
+                <svg class="h-6 w-6 text-success mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-success mb-1 break-words">
+                  +20%
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Long-tail revenue increase
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">A/B Testing</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Funnel Optimization</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Revenue Optimization</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Recommendation Logic</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Pricing Strategy</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-gradient-card rounded-2xl p-8 md:p-10 border border-card-border shadow-card hover:shadow-hover transition-all duration-300">
+          <div class="mb-6">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  Optimizing Plus Upgrade Through CTA Experimentation
+                </h3>
+                <p class="text-muted-foreground">
+                  H&R Block • DIY Tax Platform
+                </p>
+              </div>
+            </div>
+            <p class="text-lg text-foreground leading-relaxed">
+              Improved upgrade conversion from the Free product by testing small but high-impact UI and decision-making changes, with a focus on monetization and user attention.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-danger/5 rounded-lg p-6 border border-danger/20">
+              <h4 class="text-lg font-semibold text-foreground mb-3 flex items-center">
+                <svg class="h-5 w-5 mr-2 text-danger" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Challenge
+              </h4>
+              <p class="text-foreground leading-relaxed">
+                Users selecting the Free product showed low conversion to Plus, indicating unclear value perception and weak upgrade prompts during a critical decision moment.
+              </p>
+            </div>
+
+            <div class="bg-success/5 rounded-lg p-6 border border-success/20">
+              <h4 class="text-lg font-semibold text-foreground mb-3 flex items-center">
+                <svg class="h-5 w-5 mr-2 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+                Solution Approach
+              </h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Designed and ran A/B tests to isolate visual and messaging effects</span>
+                </li>
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Simplified the Free experience to reduce distraction</span>
+                </li>
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Visually emphasized the Plus upgrade using a differentiated CTA to guide attention</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-foreground mb-4">
+              Business Impact
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="bg-warning/5 rounded-lg p-4 border border-warning/20 text-center">
+                <svg class="h-6 w-6 text-warning mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-warning mb-1 break-words">
+                  +0.8 ppt
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Plus take rate lift
+                </div>
+              </div>
+              <div class="bg-warning/5 rounded-lg p-4 border border-warning/20 text-center">
+                <svg class="h-6 w-6 text-warning mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-warning mb-1 break-words">
+                  Validated
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Visual hierarchy influences upgrade behavior
+                </div>
+              </div>
+              <div class="bg-warning/5 rounded-lg p-4 border border-warning/20 text-center">
+                <svg class="h-6 w-6 text-warning mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-warning mb-1 break-words">
+                  Informed
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Future upgrade and monetization design decisions
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">A/B Testing</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Conversion Optimization</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Monetization Strategy</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">UI Decision-Making</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Hypothesis Validation</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="bg-gradient-card rounded-2xl p-8 md:p-10 border border-card-border shadow-card hover:shadow-hover transition-all duration-300">
+          <div class="mb-6">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  Clarifying Filing Options to Better Capture Switchers
+                </h3>
+                <p class="text-muted-foreground">
+                  H&R Block • DIY Tax Platform
+                </p>
+              </div>
+            </div>
+            <p class="text-lg text-foreground leading-relaxed">
+              Improved user self-identification by clarifying filing options, enabling more accurate segmentation and better downstream product decisions.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-danger/5 rounded-lg p-6 border border-danger/20">
+              <h4 class="text-lg font-semibold text-foreground mb-3 flex items-center">
+                <svg class="h-5 w-5 mr-2 text-danger" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Challenge
+              </h4>
+              <p class="text-foreground leading-relaxed">
+                Users switching from other tax providers were not clearly identifying themselves in the flow, leading to misclassification and reduced personalization opportunities.
+              </p>
+            </div>
+
+            <div class="bg-success/5 rounded-lg p-6 border border-success/20">
+              <h4 class="text-lg font-semibold text-foreground mb-3 flex items-center">
+                <svg class="h-5 w-5 mr-2 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+                Solution Approach
+              </h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Refined copy and structure on the filing history step</span>
+                </li>
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Tested clearer language to help users confidently select the option that matched their past behavior</span>
+                </li>
+                <li class="text-sm text-foreground flex items-start">
+                  <span class="text-success mr-2 mt-0.5">•</span>
+                  <span>Evaluated impact through controlled experimentation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-foreground mb-4">
+              Business Impact
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="bg-primary/5 rounded-lg p-4 border border-primary/20 text-center">
+                <svg class="h-6 w-6 text-primary mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-primary mb-1 break-words">
+                  +2 ppt
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  'Filed somewhere else' selections
+                </div>
+              </div>
+              <div class="bg-primary/5 rounded-lg p-4 border border-primary/20 text-center">
+                <svg class="h-6 w-6 text-primary mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-primary mb-1 break-words">
+                  -4 ppt
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  Incorrect first-time filer selections
+                </div>
+              </div>
+              <div class="bg-primary/5 rounded-lg p-4 border border-primary/20 text-center">
+                <svg class="h-6 w-6 text-primary mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                </svg>
+                <div class="text-xl sm:text-2xl font-bold text-primary mb-1 break-words">
+                  Improved
+                </div>
+                <div class="text-xs text-muted-foreground leading-tight">
+                  User segmentation accuracy
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">User Journey Mapping</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Experimentation</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Behavioral Insights</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">Funnel Clarity</span>
+            <span class="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground">UX Copy Optimization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-background">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        Let's Connect
+      </h2>
+      <p class="text-xl text-muted-foreground mb-8">
+        I'm always interested in discussing product strategy, user experience, and innovative solutions
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:sneha.gandhi@example.com" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 shadow-primary">
+          <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Email Me
+        </a>
+        <a href="https://linkedin.com/in/sneha-gandhi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8">
+          <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 bg-card border-t">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-muted-foreground">
+        © 2025 Sneha Gandhi. Built with passion for product excellence.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
+</body>
+</html>

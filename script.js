@@ -11,8 +11,8 @@ function scrollToSection(id) {
 document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
-  const hamburgerIcon = mobileMenuButton.querySelector('svg:first-child');
-  const closeIcon = mobileMenuButton.querySelector('svg:last-child');
+  const hamburgerIcon = mobileMenuButton.querySelector('svg:first-of-type');
+  const closeIcon = mobileMenuButton.querySelector('svg:last-of-type');
 
   mobileMenuButton.addEventListener('click', function() {
     const isOpen = !mobileMenu.classList.contains('hidden');

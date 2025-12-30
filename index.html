@@ -228,7 +228,7 @@
 
 <body class="min-h-screen bg-background">
   <!-- Portfolio Header -->
-  <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <header class="relative sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
     <div class="container flex h-16 max-w-screen-xl items-center px-6">
       <!-- Desktop Navigation -->
       <div class="mr-4 hidden md:flex">
@@ -260,8 +260,8 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 z-40 bg-background border-t border-border shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1">
           <a href="#about" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors">About</a>
           <a href="#skills" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors">Skills</a>
           <a href="#projects" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors">Projects</a>

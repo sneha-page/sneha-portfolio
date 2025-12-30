@@ -14,6 +14,26 @@ document.addEventListener('DOMContentLoaded', function() {
   const hamburgerIcon = mobileMenuButton.querySelector('svg:first-of-type');
   const closeIcon = mobileMenuButton.querySelector('svg:last-of-type');
 
+  // Add smooth scrolling to desktop navigation links
+  const desktopNavLinks = document.querySelectorAll('header nav a');
+  desktopNavLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Prevent default anchor behavior
+      e.preventDefault();
+
+      // Get the target section ID from href
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        // Smooth scroll to the target section
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
   function closeMobileMenu() {
     mobileMenu.classList.add('hidden');
     hamburgerIcon.classList.remove('hidden');
@@ -35,13 +55,49 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       openMobileMenu();
     }
+    // Remove focus from button after click to prevent outline persistence
+    this.blur();
   });
 
-  // Close menu when clicking on a link
+  // Close menu when clicking on a link and add smooth scrolling
   const mobileMenuLinks = mobileMenu.querySelectorAll('a');
   mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      closeMobileMenu(); // Re-use the function here
+    link.addEventListener('click', function(e) {
+      // Prevent default anchor behavior
+      e.preventDefault();
+
+      // Get the target section ID from href
+      const targetId = this.getAttribute('href');
+
+      if (targetId === '#home') {
+        // Special handling for Home link - scroll to top
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+
+        // Close the menu after a short delay to allow scroll to complete
+        setTimeout(() => {
+          closeMobileMenu();
+        }, 500);
+      } else {
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          // Smooth scroll to the target section
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+          // Close the menu after a short delay to allow scroll to complete
+          setTimeout(() => {
+            closeMobileMenu();
+          }, 500);
+        } else {
+          // If no target element found, just close the menu
+          closeMobileMenu();
+        }
+      }
     });
   });
 

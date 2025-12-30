@@ -108,6 +108,23 @@ body {
   transition: var(--transition-smooth);
 }
 
+/* Smooth hamburger icon transition */
+#mobile-menu-button svg {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Remove blue focus outline from mobile menu button */
+#mobile-menu-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Ensure focus is still visible for accessibility */
+#mobile-menu-button:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
 .bg-primary\/5 {
   background-color: hsl(var(--primary) / 0.05);
 }

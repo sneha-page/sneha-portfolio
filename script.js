@@ -14,25 +14,26 @@ document.addEventListener('DOMContentLoaded', function() {
   const hamburgerIcon = mobileMenuButton.querySelector('svg:first-of-type');
   const closeIcon = mobileMenuButton.querySelector('svg:last-of-type');
 
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    hamburgerIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+  }
+
+  function openMobileMenu() {
+    mobileMenu.classList.remove('hidden');
+    hamburgerIcon.classList.add('hidden');
+    closeIcon.classList.remove('hidden');
+    mobileMenuButton.setAttribute('aria-expanded', 'true');
+  }
+
   mobileMenuButton.addEventListener('click', function() {
     const isOpen = !mobileMenu.classList.contains('hidden');
-
     if (isOpen) {
-      // Close menu
-      mobileMenu.classList.add('hidden');
-      hamburgerIcon.classList.remove('hidden');
-      hamburgerIcon.classList.add('block');
-      closeIcon.classList.remove('block');
-      closeIcon.classList.add('hidden');
-      mobileMenuButton.setAttribute('aria-expanded', 'false');
+      closeMobileMenu();
     } else {
-      // Open menu
-      mobileMenu.classList.remove('hidden');
-      hamburgerIcon.classList.remove('block');
-      hamburgerIcon.classList.add('hidden');
-      closeIcon.classList.remove('hidden');
-      closeIcon.classList.add('block');
-      mobileMenuButton.setAttribute('aria-expanded', 'true');
+      openMobileMenu();
     }
   });
 
@@ -40,12 +41,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuLinks = mobileMenu.querySelectorAll('a');
   mobileMenuLinks.forEach(link => {
     link.addEventListener('click', function() {
-      mobileMenu.classList.add('hidden');
-      hamburgerIcon.classList.remove('hidden');
-      hamburgerIcon.classList.add('block');
-      closeIcon.classList.remove('block');
-      closeIcon.classList.add('hidden');
-      mobileMenuButton.setAttribute('aria-expanded', 'false');
+      closeMobileMenu(); // Re-use the function here
     });
   });
+
+  // Add listeners for the hero buttons
+  const viewWorkBtn = document.getElementById('view-work-btn');
+  if(viewWorkBtn) {
+    viewWorkBtn.addEventListener('click', () => scrollToSection('projects'));
+  }
+
+  const getInTouchBtn = document.getElementById('get-in-touch-btn');
+  if(getInTouchBtn) {
+    getInTouchBtn.addEventListener('click', () => scrollToSection('contact'));
+  }
 });

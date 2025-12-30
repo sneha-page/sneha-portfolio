@@ -1,0 +1,157 @@
+/* Product Manager Portfolio Design System */
+:root {
+  /* Background system */
+  --background: 248 250% 99%;
+  --foreground: 215 25% 12%;
+
+  /* Dashboard-specific colors */
+  --primary: 217 91% 52%;
+  --primary-foreground: 0 0% 98%;
+  --primary-glow: 217 91% 65%;
+
+  --secondary: 210 20% 96%;
+  --secondary-foreground: 215 25% 25%;
+
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 98%;
+  --success-light: 142 76% 90%;
+
+  --warning: 43 96% 56%;
+  --warning-foreground: 0 0% 98%;
+  --warning-light: 43 96% 90%;
+
+  --danger: 0 84% 60%;
+  --danger-foreground: 0 0% 98%;
+  --danger-light: 0 84% 95%;
+
+  /* Card system */
+  --card: 0 0% 100%;
+  --card-foreground: 215 25% 12%;
+  --card-border: 214 32% 91%;
+
+  /* Navigation */
+  --nav-background: 0 0% 100%;
+  --nav-foreground: 215 25% 25%;
+  --nav-accent: 217 91% 52%;
+  --nav-hover: 210 20% 96%;
+
+  /* Muted elements */
+  --muted: 210 20% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  /* Accent colors */
+  --accent: 217 91% 52%;
+  --accent-foreground: 0 0% 98%;
+
+  /* Status colors */
+  --status-todo: 43 96% 56%;
+  --status-progress: 217 91% 52%;
+  --status-done: 142 76% 36%;
+
+  /* Interactive elements */
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 217 91% 52%;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(217 91% 52%), hsl(217 91% 65%));
+  --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 50%));
+  --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
+
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px hsl(215 25% 12% / 0.1), 0 2px 4px -1px hsl(215 25% 12% / 0.06);
+  --shadow-hover: 0 10px 15px -3px hsl(215 25% 12% / 0.1), 0 4px 6px -1px hsl(215 25% 12% / 0.05);
+  --shadow-primary: 0 4px 14px 0 hsl(217 91% 52% / 0.25);
+
+  /* Animations */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease;
+
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.animate-in {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shadow-primary {
+  box-shadow: var(--shadow-primary);
+}
+
+.bg-gradient-card {
+  background: var(--gradient-card);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.transition-all {
+  transition: var(--transition-smooth);
+}
+
+.bg-primary\/5 {
+  background-color: hsl(var(--primary) / 0.05);
+}
+
+.border-primary\/20 {
+  border-color: hsl(var(--primary) / 0.2);
+}
+
+.bg-success\/5 {
+  background-color: hsl(var(--success) / 0.05);
+}
+
+.border-success\/20 {
+  border-color: hsl(var(--success) / 0.2);
+}
+
+.bg-danger\/5 {
+  background-color: hsl(var(--danger) / 0.05);
+}
+
+.border-danger\/20 {
+  border-color: hsl(var(--danger) / 0.2);
+}
+
+.bg-warning\/5 {
+  background-color: hsl(var(--warning) / 0.05);
+}
+
+.border-warning\/20 {
+  border-color: hsl(var(--warning) / 0.2);
+}
+
+.text-primary {
+  color: hsl(var(--primary));
+}
+
+.text-success {
+  color: hsl(var(--success));
+}
+
+.text-danger {
+  color: hsl(var(--danger));
+}
+
+.text-warning {
+  color: hsl(var(--warning));
+}

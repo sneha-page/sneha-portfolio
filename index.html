@@ -230,6 +230,7 @@
   <!-- Portfolio Header -->
   <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
     <div class="container flex h-16 max-w-screen-xl items-center px-6">
+      <!-- Desktop Navigation -->
       <div class="mr-4 hidden md:flex">
         <a class="mr-6 flex items-center space-x-2" href="#">
           <span class="hidden font-bold sm:inline-block">Sneha Gandhi</span>
@@ -241,9 +242,30 @@
           <a href="#contact" class="transition-colors hover:text-primary">Contact</a>
         </nav>
       </div>
+
+      <!-- Mobile Navigation -->
       <div class="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-        <div class="w-full flex-1 md:w-auto md:flex-none">
-          <!-- Mobile menu button would go here if needed -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden md:w-auto md:flex-none"></div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
+          <a href="#about" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors">About</a>
+          <a href="#skills" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors">Skills</a>
+          <a href="#projects" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors">Projects</a>
+          <a href="#contact" class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors">Contact</a>
         </div>
       </div>
     </div>
@@ -1005,15 +1027,6 @@
     </div>
   </footer>
 
-  <script>
-    function scrollToSection(id) {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
